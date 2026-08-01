@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rukn Al Tayeb Jewelry L.L.C — premium gold and luxury jewelry in Sharjah, UAE.">
+  <meta property="og:title" content="Rukn Al Tayeb Jewelry L.L.C">
+  <meta property="og:description" content="Where Authenticity Meets Luxury">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ruknaltayebjewelry.com/">
+  <meta property="og:image" content="https://ruknaltayebjewelry.com/assets/hero-store.jpg">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="canonical" href="https://ruknaltayebjewelry.com/">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <title>Rukn Al Tayeb Jewelry | ركن الطيب للمجوهرات</title>
+
+  <style>
+    :root{
+      --gold:#b78a24;
+      --gold-light:#e2c36a;
+      --black:#0b0b0b;
+      --cream:#faf7ef;
+      --text:#202020;
+      --muted:#6d6d6d;
+      --white:#fff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.65;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    .topbar{background:var(--gold);color:#fff;text-align:center;font-size:13px;padding:7px 0}
+    .site-header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800;letter-spacing:.04em;min-width:0}
+    .brand img{width:48px;height:48px;object-fit:contain;border-radius:50%;background:#fff}
+    .brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .menu{display:flex;gap:22px;align-items:center}
+    .menu a{color:#fff;font-size:14px;transition:.25s}
+    .menu a:hover{color:var(--gold-light)}
+    .menu-toggle{display:none;border:0;background:transparent;color:#fff;font-size:28px;cursor:pointer}
+    .lang-switch{border:1px solid var(--gold);background:transparent;color:#fff;padding:9px 14px;border-radius:999px;cursor:pointer;font-weight:700;white-space:nowrap}
+    .lang-switch:hover{background:var(--gold)}
+    .hero{min-height:92vh;display:grid;align-items:center;position:relative;color:#fff;background:url("assets/hero-store.jpg") center center/cover no-repeat}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.76) 30%,rgba(0,0,0,.28) 62%,rgba(0,0,0,.04))}
+    .hero-content{position:relative;z-index:2;max-width:760px;padding:110px 18px 80px}
+    .eyebrow{color:var(--gold-light);font-weight:800;letter-spacing:.18em;font-size:13px}
+    .eyebrow.dark{color:var(--gold)}
+    h1{font-size:clamp(48px,7vw,82px);line-height:1.04;margin:16px 0 24px}
+    h2{font-size:clamp(34px,4vw,52px);line-height:1.15;margin:8px 0 20px}
+    h3{margin:0 0 10px}
+    .hero-copy{max-width:680px;font-size:clamp(18px,2vw,23px);color:#ececec}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .button{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:800;border:1px solid var(--gold);transition:.25s}
+    .button-gold{background:var(--gold);color:#fff}
+    .button-gold:hover{transform:translateY(-2px);background:#9d751c}
+    .button-outline{color:#fff;background:rgba(255,255,255,.06)}
+    .hero-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:34px}
+    .hero-benefit{display:flex;align-items:flex-start;gap:11px;padding:15px;border:1px solid rgba(226,195,106,.38);border-radius:16px;background:rgba(10,10,10,.62);backdrop-filter:blur(8px)}
+    .hero-benefit svg{width:28px;height:28px;stroke:var(--gold-light);fill:none;stroke-width:1.8;flex:0 0 auto}
+    .hero-benefit strong{display:block;color:var(--gold-light);margin-bottom:2px}
+    .hero-benefit span{display:block;color:#f0f0f0;font-size:13px;line-height:1.45}
+    .section{padding:90px 0}
+    .section-soft{background:var(--cream)}
+    .section-heading{max-width:760px;text-align:center;margin:0 auto 46px}
+    .section-heading p{color:var(--muted)}
+    .split{display:grid;grid-template-columns:1.05fr .95fr;gap:58px;align-items:center}
+    .feature-image{width:100%;height:560px;object-fit:cover;border-radius:28px;box-shadow:0 20px 70px rgba(0,0,0,.16)}
+    .cards{display:grid;gap:22px}
+    .cards.three{grid-template-columns:repeat(3,1fr)}
+    .card,.product-card{background:#fff;border:1px solid #ece8df;border-radius:22px;box-shadow:0 12px 34px rgba(0,0,0,.06);transition:.28s}
+    .card{padding:28px}
+    .card:hover,.product-card:hover{transform:translateY(-7px);box-shadow:0 20px 48px rgba(0,0,0,.11)}
+    .card-icon{font-size:30px;margin-bottom:10px}
+    .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .product-card{overflow:hidden}
+    .product-card img{width:100%;height:320px;object-fit:cover}
+    .product-body{padding:24px}
+    .product-tag{display:inline-block;color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+    .stats-section{background:linear-gradient(135deg,#111,#1c1c1c);color:#fff}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stat{text-align:center;padding:28px 18px;border:1px solid rgba(255,255,255,.12);border-radius:20px;background:rgba(255,255,255,.04)}
+    .stat strong{display:block;color:var(--gold-light);font-size:44px}
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .gallery img{width:100%;height:300px;object-fit:cover;border-radius:18px}
+    .gallery img:nth-child(1),.gallery img:nth-child(4){grid-column:span 7}
+    .gallery img:nth-child(2),.gallery img:nth-child(3){grid-column:span 5}
+    .gallery img:nth-child(5){grid-column:span 12;height:410px}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+    .map-card{grid-column:1/-1;border-radius:26px;overflow:hidden;box-shadow:0 18px 48px rgba(0,0,0,.12)}
+    .map-card iframe{width:100%;height:340px;border:0;display:block}
+    .contact-card{background:var(--black);color:#fff;padding:40px;border-radius:28px;box-shadow:0 18px 48px rgba(0,0,0,.13)}
+    .contact-card a{color:var(--gold-light)}
+    .trust-strip{background:#0d0d0d;color:#fff;padding:38px 0}
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .trust-grid div{border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px;text-align:center}
+    .trust-grid strong{display:block;color:var(--gold-light);margin-bottom:6px}
+    .floating-whatsapp,.back-to-top{position:fixed;right:22px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.24)}
+    .floating-whatsapp{bottom:22px;background:#111;color:#fff;border:2px solid var(--gold);font-size:26px}
+    .back-to-top{bottom:92px;border:0;background:var(--gold);color:#fff;cursor:pointer;font-size:24px;opacity:0;pointer-events:none;transition:.25s}
+    .back-to-top.show{opacity:1;pointer-events:auto}
+    footer{background:#080808;color:#aaa;padding:34px 0;text-align:center}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:none}
+    html[dir="rtl"] body,
+    html[dir="rtl"] .container,
+    html[dir="rtl"] .hero-content,
+    html[dir="rtl"] .split > div,
+    html[dir="rtl"] .card,
+    html[dir="rtl"] .product-body,
+    html[dir="rtl"] .contact-card{direction:rtl;text-align:right}
+    html[dir="rtl"] h1,
+    html[dir="rtl"] h2,
+    html[dir="rtl"] h3,
+    html[dir="rtl"] p,
+    html[dir="rtl"] span,
+    html[dir="rtl"] a{overflow-wrap:break-word;word-break:normal}
+    html[dir="rtl"] .menu{direction:rtl}
+    html[dir="rtl"] .hero::before{background:linear-gradient(270deg,rgba(0,0,0,.92),rgba(0,0,0,.76) 30%,rgba(0,0,0,.28) 62%,rgba(0,0,0,.04))}
+    html[dir="rtl"] .floating-whatsapp,html[dir="rtl"] .back-to-top{right:auto;left:22px}
+    @media(max-width:850px){
+      .menu-toggle{display:block}
+      .menu{display:none;position:absolute;top:76px;left:0;right:0;padding:20px 4%;background:#111;flex-direction:column;align-items:flex-start}
+      .menu.open{display:flex}
+      .split,.contact-grid{grid-template-columns:1fr}
+      .cards.three,.product-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .feature-image{height:420px}
+      .gallery img{grid-column:span 12!important;height:270px!important}
+      .trust-grid,.hero-benefits{grid-template-columns:1fr}
+      .lang-switch{padding:8px 11px;font-size:13px}
+      .hero{min-height:88vh;background-position:center center}
+      .hero-content{padding:90px 14px 60px}
+      html[dir="rtl"] .container{width:92%;padding-left:5px;padding-right:5px}
+      html[dir="rtl"] h1{font-size:38px;line-height:1.25}
+    }
+    @media(max-width:520px){
+      .brand span{font-size:13px}
+      h1{font-size:42px}
+      .stats{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<div class="topbar" data-en="Official website of Rukn Al Tayeb Jewelry — Sharjah, UAE" data-ar="الموقع الرسمي لركن الطيب للمجوهرات — الشارقة، الإمارات">
+  Official website of Rukn Al Tayeb Jewelry — Sharjah, UAE
+</div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <img src="assets/logo.png" alt="Rukn Al Tayeb Jewelry logo">
+      <span data-en="RUKN AL TAYEB JEWELRY" data-ar="ركن الطيب للمجوهرات">RUKN AL TAYEB JEWELRY</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu">☰</button>
+
+    <nav class="menu">
+      <a href="#about" data-en="About" data-ar="من نحن">About</a>
+      <a href="#collections" data-en="Collections" data-ar="المنتجات">Collections</a>
+      <a href="#services" data-en="Services" data-ar="خدماتنا">Services</a>
+      <a href="#shop" data-en="Shop" data-ar="تسوق">Shop</a>
+      <a href="#gallery" data-en="Gallery" data-ar="معرض الصور">Gallery</a>
+      <a href="#contact" data-en="Contact" data-ar="تواصل معنا">Contact</a>
+    </nav>
+
+    <button class="lang-switch" id="langSwitch" type="button">العربية</button>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="container hero-content reveal">
+      <p class="eyebrow" data-en="SHARJAH · UNITED ARAB EMIRATES" data-ar="الشارقة · الإمارات العربية المتحدة">SHARJAH · UNITED ARAB EMIRATES</p>
+      <h1 data-en="Where Authenticity Meets Luxury" data-ar="حيث تلتقي الأصالة بالفخامة">Where Authenticity Meets Luxury</h1>
+      <p class="hero-copy" data-en="Premium gold and refined jewelry, presented with trust, quality and exceptional service." data-ar="ذهب فاخر ومجوهرات راقية نقدمها بثقة وجودة وخدمة استثنائية.">Premium gold and refined jewelry, presented with trust, quality and exceptional service.</p>
+
+      <div class="hero-actions">
+        <a class="button button-gold" href="#shop" data-en="Shop on WhatsApp" data-ar="تسوق عبر واتساب">Shop on WhatsApp</a>
+        <a class="button button-outline" href="#contact" data-en="Get in Touch" data-ar="تواصل معنا">Get in Touch</a>
+      </div>
+
+      <div class="hero-benefits">
+        <div class="hero-benefit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4-5h10l4 5-9 13z"/><path d="M3 8h18M7 3l5 18 5-18"/></svg>
+          <div><strong data-en="Guaranteed Quality" data-ar="جودة مضمونة">Guaranteed Quality</strong><span data-en="Refined pieces selected with care" data-ar="قطع راقية مختارة بعناية">Refined pieces selected with care</span></div>
+        </div>
+        <div class="hero-benefit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M8.5 13L7 22l5-3 5 3-1.5-9"/><path d="M10 8l1.3 1.3L14 6.5"/></svg>
+          <div><strong data-en="Exclusive Designs" data-ar="تصاميم حصرية">Exclusive Designs</strong><span data-en="Styles that reflect your taste" data-ar="تصاميم تعكس ذوقك">Styles that reflect your taste</span></div>
+        </div>
+        <div class="hero-benefit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div><strong data-en="Trust & Experience" data-ar="ثقة وخبرة">Trust & Experience</strong><span data-en="Professional service in Sharjah" data-ar="خدمة احترافية في الشارقة">Professional service in Sharjah</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section reveal">
+    <div class="container split">
+      <div>
+        <p class="eyebrow dark" data-en="ABOUT US" data-ar="من نحن">ABOUT US</p>
+        <h2 data-en="Our story with gold and luxury" data-ar="قصتنا مع الذهب والفخامة">Our story with gold and luxury</h2>
+        <p data-en="Rukn Al Tayeb Jewelry is a UAE-based company specializing in the trade of gold and high-end jewelry. We offer an exceptional selection of premium pieces and believe that every piece of jewelry tells a story." data-ar="ركن الطيب للمجوهرات شركة إماراتية متخصصة في تجارة الذهب والمجوهرات الراقية. نقدم مجموعة استثنائية من القطع الفاخرة، ونؤمن بأن كل قطعة مجوهرات تحكي قصة.">Rukn Al Tayeb Jewelry is a UAE-based company specializing in the trade of gold and high-end jewelry. We offer an exceptional selection of premium pieces and believe that every piece of jewelry tells a story.</p>
+        <p data-en="Our philosophy is built on elegant design, uncompromising quality and distinguished customer service. We strive to build lasting relationships through trust, transparency and professional care." data-ar="تقوم فلسفتنا على التصميم الراقي والجودة التي لا تقبل التنازل وخدمة العملاء المتميزة. نسعى إلى بناء علاقات طويلة الأمد من خلال الثقة والشفافية والاحترافية.">Our philosophy is built on elegant design, uncompromising quality and distinguished customer service. We strive to build lasting relationships through trust, transparency and professional care.</p>
+      </div>
+      <img class="feature-image" src="assets/showcase-1.png" alt="Luxury jewelry display">
+    </div>
+  </section>
+
+  <section id="collections" class="section section-soft reveal">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow dark" data-en="OUR COLLECTIONS" data-ar="مجموعاتنا">OUR COLLECTIONS</p>
+        <h2 data-en="Collections that dazzle" data-ar="تشكيلات تخطف الأنظار">Collections that dazzle</h2>
+      </div>
+      <div class="cards three">
+        <article class="card"><div class="card-icon">💎</div><h3 data-en="Gold Sets & Bracelets" data-ar="أطقم ذهب وأساور">Gold Sets & Bracelets</h3><p data-en="Coordinated sets and bracelets crafted with refined artistry." data-ar="أطقم متناسقة وأساور مصنوعة بحرفية راقية.">Coordinated sets and bracelets crafted with refined artistry.</p></article>
+        <article class="card"><div class="card-icon">💍</div><h3 data-en="Rings & Bands" data-ar="خواتم ودبل">Rings & Bands</h3><p data-en="Classic and contemporary designs for occasions and daily wear." data-ar="تصاميم كلاسيكية وعصرية للمناسبات والاستخدام اليومي.">Classic and contemporary designs for occasions and daily wear.</p></article>
+        <article class="card"><div class="card-icon">✨</div><h3 data-en="Chains & Earrings" data-ar="سلاسل وأقراط">Chains & Earrings</h3><p data-en="Distinctive pieces in elegant designs and varied weights." data-ar="قطع مميزة بتصاميم أنيقة وأوزان متنوعة.">Distinctive pieces in elegant designs and varied weights.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section reveal">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow dark" data-en="OUR SERVICES" data-ar="خدماتنا">OUR SERVICES</p>
+        <h2 data-en="More than just jewelry" data-ar="نقدم أكثر من مجرد مجوهرات">More than just jewelry</h2>
+      </div>
+      <div class="cards three">
+        <article class="card"><h3 data-en="Custom Design" data-ar="تصميم حسب الطلب">Custom Design</h3><p data-en="Unique pieces created according to your taste and requirements." data-ar="قطع فريدة تُصمم وفق ذوقك ومتطلباتك.">Unique pieces created according to your taste and requirements.</p></article>
+        <article class="card"><h3 data-en="Repair & Maintenance" data-ar="إصلاح وصيانة">Repair & Maintenance</h3><p data-en="Professional repair, polishing and maintenance by skilled specialists." data-ar="خدمات إصلاح وتلميع وصيانة بأيدي متخصصين.">Professional repair, polishing and maintenance by skilled specialists.</p></article>
+        <article class="card"><h3 data-en="After-Sales Service" data-ar="خدمة ما بعد البيع">After-Sales Service</h3><p data-en="Continuous follow-up and care for your peace of mind." data-ar="متابعة مستمرة واهتمام يمنحك راحة البال.">Continuous follow-up and care for your peace of mind.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="shop" class="section section-soft reveal">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow dark" data-en="SHOP BY WHATSAPP" data-ar="تسوق عبر واتساب">SHOP BY WHATSAPP</p>
+        <h2 data-en="Featured jewelry" data-ar="مجوهرات مختارة">Featured jewelry</h2>
+        <p data-en="Choose a piece and send us a ready-made WhatsApp inquiry." data-ar="اختر القطعة وأرسل لنا استفسارًا جاهزًا عبر واتساب.">Choose a piece and send us a ready-made WhatsApp inquiry.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="assets/showcase-2.png" alt="Elegant gold set">
+          <div class="product-body">
+            <span class="product-tag" data-en="Gold Set" data-ar="طقم ذهب">Gold Set</span>
+            <h3 data-en="Elegant Gold Set" data-ar="طقم ذهب أنيق">Elegant Gold Set</h3>
+            <p data-en="Premium design for special occasions." data-ar="تصميم فاخر للمناسبات الخاصة.">Premium design for special occasions.</p>
+            <a class="button button-gold" href="https://wa.me/971568518545?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20the%20Elegant%20Gold%20Set" target="_blank" rel="noopener" data-en="Ask on WhatsApp" data-ar="استفسر عبر واتساب">Ask on WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="assets/showcase-3.png" alt="Luxury bracelets">
+          <div class="product-body">
+            <span class="product-tag" data-en="Bracelets" data-ar="أساور">Bracelets</span>
+            <h3 data-en="Luxury Bracelets" data-ar="أساور فاخرة">Luxury Bracelets</h3>
+            <p data-en="Refined designs with distinctive details." data-ar="تصاميم راقية بتفاصيل مميزة.">Refined designs with distinctive details.</p>
+            <a class="button button-gold" href="https://wa.me/971568518545?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20the%20Luxury%20Bracelets" target="_blank" rel="noopener" data-en="Ask on WhatsApp" data-ar="استفسر عبر واتساب">Ask on WhatsApp</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <img src="assets/showcase-4.png" alt="Classic jewelry collection">
+          <div class="product-body">
+            <span class="product-tag" data-en="Rings & Earrings" data-ar="خواتم وأقراط">Rings & Earrings</span>
+            <h3 data-en="Classic Collection" data-ar="التشكيلة الكلاسيكية">Classic Collection</h3>
+            <p data-en="Timeless pieces for gifts and daily elegance." data-ar="قطع خالدة للهدايا والأناقة اليومية.">Timeless pieces for gifts and daily elegance.</p>
+            <a class="button button-gold" href="https://wa.me/971568518545?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20the%20Classic%20Collection" target="_blank" rel="noopener" data-en="Ask on WhatsApp" data-ar="استفسر عبر واتساب">Ask on WhatsApp</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stats-section reveal">
+    <div class="container stats">
+      <div class="stat"><strong>10+</strong><span data-en="Years of Experience" data-ar="سنوات خبرة">Years of Experience</span></div>
+      <div class="stat"><strong>5000+</strong><span data-en="Happy Clients" data-ar="عميل سعيد">Happy Clients</span></div>
+      <div class="stat"><strong>1000+</strong><span data-en="Designs" data-ar="تصميم">Designs</span></div>
+      <div class="stat"><strong>4</strong><span data-en="Gold Karats" data-ar="عيارات ذهب">Gold Karats</span></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section reveal">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow dark" data-en="PHOTO GALLERY" data-ar="معرض الصور">PHOTO GALLERY</p>
+        <h2 data-en="A glimpse of our world" data-ar="لمحة من عالمنا">A glimpse of our world</h2>
+      </div>
+      <div class="gallery">
+        <img src="assets/showcase-2.png" alt="Gold jewelry collection">
+        <img src="assets/showcase-3.png" alt="Luxury gold jewelry">
+        <img src="assets/interior.png" alt="Store interior">
+        <img src="assets/showcase-4.png" alt="Jewelry showroom">
+        <img src="assets/storefront.png" alt="Rukn Al Tayeb Jewelry storefront">
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-soft reveal">
+    <div class="container contact-grid">
+      <div>
+        <p class="eyebrow dark" data-en="CONTACT US" data-ar="تواصل معنا">CONTACT US</p>
+        <h2 data-en="Visit Rukn Al Tayeb Jewelry" data-ar="زوروا ركن الطيب للمجوهرات">Visit Rukn Al Tayeb Jewelry</h2>
+        <p data-en="Al Majaz Central Market, Sharjah, United Arab Emirates." data-ar="السوق المركزي – المجاز، الشارقة، الإمارات العربية المتحدة.">Al Majaz Central Market, Sharjah, United Arab Emirates.</p>
+        <a class="button button-gold" href="https://maps.app.goo.gl/qMJF7esQ65i2JCGk9" target="_blank" rel="noopener" data-en="Visit Our Store" data-ar="زيارة متجرنا">Visit Our Store</a>
+      </div>
+
+      <div class="contact-card">
+        <p><strong data-en="Phone" data-ar="الهاتف">Phone</strong><br><a href="tel:+971568518545">+971 56 851 8545</a></p>
+        <p><strong data-en="Email" data-ar="البريد الإلكتروني">Email</strong><br><a href="mailto:info@ruknaltayebjewelry.com">info@ruknaltayebjewelry.com</a></p>
+        <p><strong data-en="Instagram" data-ar="إنستجرام">Instagram</strong><br><a href="https://www.instagram.com/rukn.altayeb.jewellery/" target="_blank" rel="noopener">@rukn.altayeb.jewellery</a></p>
+        <p><strong data-en="WhatsApp" data-ar="واتساب">WhatsApp</strong><br><a href="https://wa.me/971568518545" target="_blank" rel="noopener">+971 56 851 8545</a></p>
+      </div>
+
+      <div class="map-card">
+        <iframe title="Rukn Al Tayeb Jewelry location" src="https://www.google.com/maps?q=Rukn%20Al%20Tayeb%20Jewelry%20Sharjah&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-strip">
+    <div class="container trust-grid">
+      <div><strong data-en="Trusted Service" data-ar="خدمة موثوقة">Trusted Service</strong><span data-en="Professional care and transparency" data-ar="احترافية وشفافية في التعامل">Professional care and transparency</span></div>
+      <div><strong data-en="Premium Quality" data-ar="جودة فاخرة">Premium Quality</strong><span data-en="Selected jewelry and refined craftsmanship" data-ar="مجوهرات مختارة وحرفية راقية">Selected jewelry and refined craftsmanship</span></div>
+      <div><strong data-en="Sharjah, UAE" data-ar="الشارقة، الإمارات">Sharjah, UAE</strong><span data-en="Visit us at Al Majaz Central Market" data-ar="زورونا في السوق المركزي بالمجاز">Visit us at Al Majaz Central Market</span></div>
+    </div>
+  </section>
+</main>
+
+<a class="floating-whatsapp" href="https://wa.me/971568518545" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<footer>
+  <div class="container" data-en="© 2026 Rukn Al Tayeb Jewelry L.L.C" data-ar="© 2026 ركن الطيب للمجوهرات ذ.م.م">© 2026 Rukn Al Tayeb Jewelry L.L.C</div>
+</footer>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  const backToTop = document.querySelector('.back-to-top');
+  const langSwitch = document.getElementById('langSwitch');
+
+  menuToggle.addEventListener('click', () => menu.classList.toggle('open'));
+  document.querySelectorAll('.menu a').forEach(link => link.addEventListener('click', () => menu.classList.remove('open')));
+
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  window.addEventListener('scroll', () => backToTop.classList.toggle('show', window.scrollY > 500));
+  backToTop.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+  function setLanguage(lang){
+    const isArabic = lang === 'ar';
+    document.documentElement.lang = lang;
+    document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
+
+    document.querySelectorAll('[data-en][data-ar]').forEach(el => {
+      el.textContent = isArabic ? el.dataset.ar : el.dataset.en;
+    });
+
+    langSwitch.textContent = isArabic ? 'English' : 'العربية';
+    localStorage.setItem('siteLanguage', lang);
+  }
+
+  langSwitch.addEventListener('click', () => {
+    setLanguage(document.documentElement.lang === 'ar' ? 'en' : 'ar');
+  });
+
+  setLanguage(localStorage.getItem('siteLanguage') || 'en');
+</script>
+
+</body>
+</html>
