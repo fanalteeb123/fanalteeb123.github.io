@@ -474,3 +474,61 @@ html[dir="rtl"] .back-to-top{right:auto;left:22px}
   .site-header{top:28px}
   .trust-grid{grid-template-columns:1fr}
 }
+html[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] .container,
+html[dir="rtl"] .hero-content,
+html[dir="rtl"] .split > div,
+html[dir="rtl"] .card,
+html[dir="rtl"] .product-body,
+html[dir="rtl"] .contact-card {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] p,
+html[dir="rtl"] span,
+html[dir="rtl"] a {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+html[dir="rtl"] .hero-content {
+  width: 100%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: 0;
+  padding-right: 12px;
+  padding-left: 12px;
+}
+
+html[dir="rtl"] .brand span {
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+}
+
+@media (max-width: 850px) {
+  html[dir="rtl"] .container {
+    width: 92%;
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+
+  html[dir="rtl"] h1 {
+    font-size: 38px;
+    line-height: 1.25;
+  }
+
+  html[dir="rtl"] .menu {
+    right: 0;
+    left: 0;
+    align-items: flex-start;
+  }
+}
